@@ -1,0 +1,17 @@
+server:
+  port:10010
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    username: scott
+    password: c19941115
+    platform: h2
+    schema: classpath:db_inital/table.sql
+    data: classpath:db_inital/data.sql
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
